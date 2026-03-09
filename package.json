@@ -1,0 +1,27 @@
+{
+  "name": "test-video",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "preview": "npx remotion preview",
+    "render": "npx remotion render",
+    "render:all": "npx remotion render SizzleReel out/sizzle-reel.mp4 && npx remotion render MatrixRedaction out/matrix-redaction.mp4 && npx remotion render TerminalDemo out/terminal-demo.mp4 && npx remotion render HashCascade out/hash-cascade.mp4 && npx remotion render SearchModes out/search-modes.mp4 && npx remotion render GlitchTrust out/glitch-trust.mp4",
+    "narrate": "npx tsx scripts/generate-narration.ts",
+    "narrate:dry": "npx tsx scripts/generate-narration.ts --dry-run",
+    "narrate:hd": "npx tsx scripts/generate-narration.ts --hd"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@remotion/cli": "^4.0.434",
+    "@remotion/transitions": "^4.0.434",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.434"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}
