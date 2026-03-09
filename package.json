@@ -1,6 +1,7 @@
 {
-  "name": "test-video",
+  "name": "video-studio",
   "version": "1.0.0",
+  "description": "Programmatic video production with Remotion + Kling AI + TTS",
   "main": "index.js",
   "scripts": {
     "preview": "npx remotion preview",
@@ -8,12 +9,14 @@
     "render:all": "npx remotion render SizzleReel out/sizzle-reel.mp4 && npx remotion render MatrixRedaction out/matrix-redaction.mp4 && npx remotion render TerminalDemo out/terminal-demo.mp4 && npx remotion render HashCascade out/hash-cascade.mp4 && npx remotion render SearchModes out/search-modes.mp4 && npx remotion render GlitchTrust out/glitch-trust.mp4",
     "narrate": "npx tsx scripts/generate-narration.ts",
     "narrate:dry": "npx tsx scripts/generate-narration.ts --dry-run",
-    "narrate:hd": "npx tsx scripts/generate-narration.ts --hd"
+    "narrate:hd": "npx tsx scripts/generate-narration.ts --hd",
+    "video": "npx tsx scripts/generate-video.ts",
+    "video:dry": "npx tsx scripts/generate-video.ts --dry-run",
+    "budget": "npx tsx scripts/budget.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "hghallTAZ",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@remotion/cli": "^4.0.434",
     "@remotion/transitions": "^4.0.434",
@@ -22,6 +25,11 @@
     "remotion": "^4.0.434"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.3.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "jsonwebtoken": "^9.0.3",
     "tsx": "^4.21.0"
   }
 }
