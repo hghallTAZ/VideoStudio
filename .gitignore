@@ -2,3 +2,9 @@ node_modules/
 dist/
 .DS_Store
 *.log
+
+# Rendered videos - large binaries, render locally
+out/*.mp4
+
+# Generated audio - regenerate with `npm run narrate`
+public/audio/*.mp3
